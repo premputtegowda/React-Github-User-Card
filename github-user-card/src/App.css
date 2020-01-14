@@ -1,0 +1,99 @@
+
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.follower-container img{
+  height:50px;
+  width:50px;
+  border-radius:50%;
+}
+.tooltip {
+  width: 100%;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width:120px;
+  color: black;
+  background-color: papayawhip;
+  position: absolute;
+  z-index: 1;
+
+}
+
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  text-align: center;
+}
+.follower-container {
+  display: flex;
+  flex-flow: row wrap;
+
+  margin:0
+}           
+
+.user-container {
+  display:flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.card {
+  width: 25%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card>img{
+  width: 90%;
+  margin: 0 auto;
+  
+}
+
+.card-body {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+.card-body a,p{
+  width:25%;
+}
