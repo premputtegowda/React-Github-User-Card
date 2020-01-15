@@ -9,7 +9,7 @@ class App extends React.Component {
     super();
     this.state = {
       users:[],
-      followers:[]
+      followers:{login:'',follower_data:[]}
      
     }
   }
@@ -23,22 +23,25 @@ class App extends React.Component {
       .catch(err => console.log(err))
   }
 
-  fetchFollowers = (url) => {
+  fetchFollowers = (user) => {
    
-    axios.get(url)
+    axios.get(`https://api.github.com/users/${user}/followers`)
     .then(res => {
       console.log('onClick: ', res)
-      this.setState({
-        followers: res.data
-      })
+      this.setState({followers: {login:user, follower_data: res.data}})
     })
     .catch(err=> console.log(err))
   }
+
+  resetFollowers = () => {
+    this.setState({followers: {login:'', follower_data:[]}})
+  }
+  
   render(){
     return (
       <div className="App">
 
-        <UserList users={this.state.users} fetchFollowers={this.fetchFollowers} followers={this.state.followers} />
+        <UserList users={this.state.users} fetchFollowers={this.fetchFollowers} followers={this.state.followers} resetFollowers={this.resetFollowers}/>
        
       </div>
     )

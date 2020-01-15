@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaGithub, FaUserFriends } from 'react-icons/fa';
-import { GiShadowFollower } from "react-icons/gi";
+
 import FollowerList from './FollowerList'
 
 export default function User(props){
@@ -13,10 +13,14 @@ export default function User(props){
            <div className="card-body">
                <p>{props.user.login}</p>
                <a href={`${props.user.html_url}`} target="_blank" ><FaGithub /></a>
-               <p onClick={()=> props.fetchFollowers(props.user.followers_url)}><FaUserFriends/></p>
+               <p onClick={()=> props.fetchFollowers(props.user.login)}><FaUserFriends/></p>
 
                <div>
-                    <FollowerList followers={props.followers}/>
+                    {props.user.login === props.followers.login && <FollowerList followers={props.followers} resetFollowers={props.resetFollowers}/> }
+                       
+                   
+                   
+                    
                 </div>
               
            </div>

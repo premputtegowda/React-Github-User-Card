@@ -7,12 +7,12 @@ export default function Follower(props){
     
     return(
 
-           <div className='follower-container'>              
+                      
                 <div className='tooltip'>
                     <img src={`${props.follower.avatar_url}`} alt="User Avatar" /> 
                     <span class='tooltiptext'>{props.follower.login}</span>
                 
-                </div>
+               
            </div>
      
     )
