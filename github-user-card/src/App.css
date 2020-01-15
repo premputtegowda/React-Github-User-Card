@@ -12,9 +12,15 @@
   }
 }
 
+.App {
+
+  margin: auto;
+}
+
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  margin-bottom: 20px;
+  height: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,6 +31,7 @@
 
 .App-link {
   color: #61dafb;
+
 }
 
 @keyframes App-logo-spin {
@@ -35,7 +42,11 @@
     transform: rotate(360deg);
   }
 }
-
+.user-container{
+  display: flex;
+  flex-flow: row wrap;
+  
+}
 .follower-container img{
   height:50px;
   width:50px;
@@ -86,19 +97,23 @@ p svg {
   display:flex;
   flex-flow: row wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   
 }
 
 .card {
-  width: 30%;
+  width: 150px;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  margin-bottom: 8px;
 }
 
 .card>img{
-  width: 90%;
-  margin: 0 auto;
+  width: 130px;
+  margin-left: 10px;
   
 }
 
@@ -114,4 +129,5 @@ p svg {
 .card-body a,p{
   width:25%;
   padding:2%;
+  font-size: 10px;
 }

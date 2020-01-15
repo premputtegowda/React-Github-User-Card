@@ -40,9 +40,10 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
+        <div className='App-header'>React Github Usercard Project</div>
 
         <UserList users={this.state.users} fetchFollowers={this.fetchFollowers} followers={this.state.followers} resetFollowers={this.resetFollowers}/>
-       
+        
       </div>
     )
   }
